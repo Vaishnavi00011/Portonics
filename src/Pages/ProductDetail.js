@@ -1,0 +1,138 @@
+import React from "react";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+
+function ProductDetail() {
+  const productInfo = JSON.parse(localStorage.getItem("productInfo"));
+  return (
+    <div className="">
+      
+      <Header></Header>
+      <div className=" back-div w-[100%] h-[100vh]  fixed z-[100] flex justify-end">
+      <div className="w-[40%] h-[100vh] bg-red-500 fixed  flex  flex-col gap-4    ">
+      <div className=" cart-div flex justify-between w-[100%] h-[10vh]  items-center px-8   ">
+        <h1 className="text-[23px]">Cart</h1>
+        <label className="text-[23px]">X</label>
+      </div>
+      <div className="w-[100%] flex justify-between items-center">
+        <div className="flex w-[90%] items-center gap-4 px-8">
+          <img className="w-[100px] h-[100px]" src="https://www.portronics.com/cdn/shop/files/Dash21500x15001_440x@2x.progressive.jpg?v=1691658670"></img>
+          <div className="flex flex-col">
+          <label className="text-[18px]">Dash 2</label>
+          <label className="text-[15px]">Black ₹3,699</label>
+          </div>
+        </div>
+        <div className="w-[45%]  flex flex-col justify-end">
+          <input className="w-[20%] outline-none bottom-2"></input>
+          <label>Remove</label>
+
+        </div>
+
+      </div>
+      </div>
+      </div>
+      
+      <div className="w-[100%] flex justify-between gap-20 pt-28 px-10 bg-[]  ">
+        <div className="w-[40%] h-[90vh]">
+          <img className="w-[100%] h-[70vh] " src={productInfo.mainImage}></img>
+          <div className="flex gap-4 w-[100%] cursor-pointer ">
+            {productInfo.images.map((i)=>
+            <img
+              className="w-[17%] h-[13vh] rounded-[3px] relative"
+              src={i}
+            ></img>
+          )}
+           </div>
+        </div>
+        <div className="w-[60%] h-[90vh] flex flex-col gap-5 bg-[]">
+          <div className="w-[60%] h-[90vh] flex flex-col gap-5">
+            <h1 className="text-[24px] font-bold cursor-text">
+              {productInfo.productName}
+            </h1>
+
+            <div className="flex gap-1 items-center">
+              <i class="fa fa-star-o text-[orange]" aria-hidden="true"></i>
+              <i class="fa fa-star-o text-[orange]" aria-hidden="true"></i>
+              <i class="fa fa-star-o text-[orange]" aria-hidden="true"></i>
+              <i class="fa fa-star-o text-[orange]" aria-hidden="true"></i>
+              <i class="fa fa-star-o text-[orange]" aria-hidden="true"></i>
+              <label className="text-[14px]">
+                {productInfo.rating}(117 review)
+              </label>
+            </div>
+            <div className="flex gap-3 items-center">
+              <label className="text-[24px] font-semibold">
+                ₹{" "}
+                {(
+                  (productInfo.price * productInfo.discount) /
+                  100
+                ).toLocaleString()}
+              </label>
+              <label className="text-[18px] line-through">
+                ₹ {productInfo.price.toLocaleString()}
+              </label>
+            </div>
+            {/* <div className='w-[55%] h-[11vh] border-[2px] flex flex-col justify-center gap-1 rounded-2xl border-black'>
+                <div className='flex  gap-2'>
+                <label className='text-[15px] font-semibold'>or 3 monthly payments of ₹1233 with  </label>
+                <img className='w-[35px] h-[20px]' src='https://assets.snapmint.com/assets/checkout/snapmint_mono_logo_green.png'></img>
+                </div>
+                
+                
+                <label className='text-[10px] text-gray-400 font-semibold'>UPI & Cards Accepted, Online approval in 2 minutes <button className='w-[100px] h-[20px] border text-[12px] font-semibold rounded-3xl text-white bg-[black]'>BUY ON EMI</button> </label>
+                </div> */}
+            <label className="text-[12px] mt-[-10px] cursor-text">
+              Inclusive of all taxes.
+            </label>
+
+            <button className="w-[80%] h-[8vh] rounded-[60px] border-[2px] border-black cursor-pointer">
+              {" "}
+              Add to Cart
+            </button>
+            <button className="w-[80%] h-[8vh] rounded-[60px] border border-black text-white bg-[black] cursor-pointer">
+              Buy it Now
+            </button>
+          </div>
+          
+          <div className="w-[100%] flex flex-col gap-5 pt-28 bg-[]">
+            <div className="flex gap-2 items-center">
+              <i
+                class="fa fa-tag text-green-700 text-[20px]"
+                aria-hidden="true"
+              ></i>
+              <h1 className=" font-bold cursor-text">Offers Available</h1>
+            </div>
+            <div className="w-[90%] h-[12vh] border border-gray-400 flex items-center justify-between px-4 bg-[]">
+              <div className="w-[70%] h-[10vh] flex gap-6 items-center bg-[]">
+                <img
+                  className="w-[20%] h-[6vh]"
+                  src="https://www.portronics.com/cdn/shop/files/UPI_Image.jpg?v=1686768611"
+                ></img>
+                <label className="text-[13px] cursor-text">
+                  5% Extra Discount on Prepaid Orders
+                </label>
+              </div>
+              <label className="text-[12px] text-blue-600 cursor-pointer">
+                *T&C
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="w-[100%] h-[20vh] mt-14  flex items-center justify-center gap-3 text-[16px] ">
+        <label className=" border-b-2 pt-2 pb-1 border-black cursor-pointer">
+          Description
+        </label>
+        <label className=" cursor-pointer">More Information</label>
+        <label className=" cursor-pointer">Specification</label>
+      </div>
+
+     
+
+      <Footer></Footer>
+    </div>
+  );
+}
+
+export default ProductDetail;
