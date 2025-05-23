@@ -8,29 +8,7 @@ function ProductDetail() {
     <div className="">
       
       <Header></Header>
-      <div className=" back-div w-[100%] h-[100vh]  fixed z-[100] flex justify-end">
-      <div className="w-[40%] h-[100vh] bg-red-500 fixed  flex  flex-col gap-4    ">
-      <div className=" cart-div flex justify-between w-[100%] h-[10vh]  items-center px-8   ">
-        <h1 className="text-[23px]">Cart</h1>
-        <label className="text-[23px]">X</label>
-      </div>
-      <div className="w-[100%] flex justify-between items-center">
-        <div className="flex w-[90%] items-center gap-4 px-8">
-          <img className="w-[100px] h-[100px]" src="https://www.portronics.com/cdn/shop/files/Dash21500x15001_440x@2x.progressive.jpg?v=1691658670"></img>
-          <div className="flex flex-col">
-          <label className="text-[18px]">Dash 2</label>
-          <label className="text-[15px]">Black ₹3,699</label>
-          </div>
-        </div>
-        <div className="w-[45%]  flex flex-col justify-end">
-          <input className="w-[20%] outline-none bottom-2"></input>
-          <label>Remove</label>
-
-        </div>
-
-      </div>
-      </div>
-      </div>
+     
       
       <div className="w-[100%] flex justify-between gap-20 pt-28 px-10 bg-[]  ">
         <div className="w-[40%] h-[90vh]">

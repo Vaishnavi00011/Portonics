@@ -93,7 +93,7 @@ function Productlist() {
                         </td>
                         <td>{i.productName}</td>
                         <td>{i.category}</td>
-                        <td>Rs. {i.price.toLocaleString()}</td>
+                        <td>Rs. {i.price}</td>
                         <td className="">
                           <img
                             src="https://preadmin.dreamstechnologies.com/html/pos/template/assets/img/icons/eye.svg"

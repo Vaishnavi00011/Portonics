@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 function Product() {
+
   const navigate = useNavigate()
   return (
     <div className=" w-[100%] flex flex-col gap-8 lg:pt-10 pt-20 lg:items-start items-center justify-center">
@@ -16,11 +17,9 @@ function Product() {
           <div onClick={()=>{localStorage.setItem("categoryname", "Soundbars"); navigate('/products')}} className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_4572f99f-fe35-4dfd-ae93-a67ca8f5037e.png?v=1701514371"></img>
           </div>
-          <div className=" img1 lg:w-[30%] w-full ">
+          <div onClick={()=>{localStorage.setItem("categoryname","Party Speaker") ; navigate('/products')}} className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_2_3267a377-faaf-494a-b91c-ff82ea3d7ce1.png?v=1701514134"></img>
           </div>
-        {/* </div> */}
-        {/* <div className="flex   justify-center  w-[100%] bg-[]"> */}
           <div className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/projector-desktop.png?v=1689598023"></img>
           </div>
@@ -30,8 +29,6 @@ function Product() {
           <div className=" img1 lg:w-[30%] w-full">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_4_014a02e0-ab13-4131-bc6e-97fcc7827269.png?v=1701514311"></img>
           </div>
-        {/* </div> */}
-        {/* <div className="flex justify-center  w-[100%] bg-[]"> */}
           <div className=" img1 lg:w-[30%] w-full">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_12.png?v=1701761908"></img>
           </div>
@@ -41,8 +38,6 @@ function Product() {
           <div className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_5_08bd024c-9424-4619-96a4-afa997650650.png?v=1701762125"></img>
           </div>
-        {/* </div> */}
-        {/* <div className="flex justify-center  w-[100%] bg-[]"> */}
           <div className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]" src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_11.png?v=1701761835"></img>
           </div>
@@ -52,9 +47,7 @@ function Product() {
           <div className=" img1 lg:w-[30%] w-full ">
             <img className="w-[100%]"  src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_14.png?v=1701762261"></img>
           </div>
-        {/* </div> */}
 
-        {/* <div className="flex justify-center h-[65vh] w-[100%] bg-[]"> */}
           <div className=" img1 lg:w-[30%] w-full ">
             <img className=" w-[100%]"  src="https://www.portronics.com/cdn/shop/files/Artboard_1_copy_10.png?v=1701761786"></img>
           </div>
@@ -64,6 +57,7 @@ function Product() {
           <div className="img1 lg:w-[30%] w-full ">
             <img className=" w-[100%]" src="https://www.portronics.com/cdn/shop/files/Mobile_15549a39-8941-4741-86ac-abb352f58752.png?v=1672402972"></img>
           </div>
+
         </div>
       </div>
     </div>

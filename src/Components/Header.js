@@ -55,7 +55,7 @@ function Header() {
     {loginModal == true &&
     <div className='w-full h-[100vh] login-div fixed top-0 left-0 flex items-center justify-center'>
      
-    
+     
       <div className='h-[60vh] w-[25%] rounded-xl bg-white flex flex-col px-3 gap-3'>
         <div className='flex items-end justify-end w-[100%] h-[5vh]'>
       <div onClick={()=>setLoginModal(false)} className='w-[15px] h-[15px]  text-[13px] bg-gray-600 text-white border border-black rounded-full flex items-center justify-center mt-4 '> x</div>
@@ -83,6 +83,8 @@ function Header() {
 
       </div>
     </div> }
+
+    
 
     </div>
   )
